@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D3F4F6;
+
+        }
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+        /* Gallery Styles */
+        .gallery-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        /* Top Division Line */
+        .top-divider {
+            border-top: 2px solid #ddd;
+            margin-top: 20px;
+        }
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <h2>Gallery</h2>
+
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <img src="6543.jpeg" alt="Image 1">
+            <img src="5432.jpeg" alt="Image 2">
+            <img src="4321.jpeg" alt="Image 3">
+            <img src="6543.jpeg" alt="Image 1">
+            <img src="5432.jpeg" alt="Image 2">
+            <img src="4321.jpeg" alt="Image 3">
+             <img src="6543.jpeg" alt="Image 1">
+            <img src="5432.jpeg" alt="Image 2">
+            <img src="4321.jpeg" alt="Image 3">
+            <img src="6543.jpeg" alt="Image 1">
+            <img src="5432.jpeg" alt="Image 2">
+            <img src="4321.jpeg" alt="Image 3">
+            <img src="6543.jpeg" alt="Image 1">
+            <img src="5432.jpeg" alt="Image 2">
+            <img src="4321.jpeg" alt="Image 3">
+            <img src="6543.jpeg" alt="Image 1">
+            <img src="5432.jpeg" alt="Image 2">
+            <img src="4321.jpeg" alt="Image 3">
+   
+
+            <!-- Add more images here -->
+        </div>
+       <center><button> <a href="shriram main.html" class="back-button">Back</a></button></center>
+    </div>
+
+    <!-- Top Division Line -->
+
+    <div class="top-divider"></div>
+
+</body>
+</html>

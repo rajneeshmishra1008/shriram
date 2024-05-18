@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 300px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .signup-link, .display-link, .back-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .signup-link a, .display-link a, .back-btn a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .signup-link a:hover, .display-link a:hover, .back-btn a:hover {
+            color: #0056b3;
+        }
+        #signup-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h1>Login</h1>
+        <form id="login-form" action="login.php" method="post" onsubmit="return handleFormSubmit(event, 'login')">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        
+        <div class="signup-link">
+            <p>Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
+        </div>
+        <hr>
+        
+        <div class="back-btn">
+            <button><a href="shriram main.html">Back</a></button>
+        </div>
+    </div>
+
+    <div class="container" id="signup-container">
+        <h1>Sign Up</h1>
+        <form id="signup-form" action="signup.php" method="post" onsubmit="return handleFormSubmit(event, 'signup')">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        
+        <div class="signup-link">
+            <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+        </div>
+        <hr>
+        
+        <div class="back-btn">
+            <button><a href="shriram main.html">Back</a></button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signup-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('signup-container').style.display = 'block';
+        });
+
+        document.getElementById('login-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('signup-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+        });
+
+        
+    </script>
+</body>
+</html>

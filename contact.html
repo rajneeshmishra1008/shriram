@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxCyZd3N-odAkLNOnoDYgiidN4GlLVt7ZI2vlgbGNyHzo8CHQ9FAWOTu3woZwRzEmgIQI&usqp=CAU'); 
+            background-size: cover;
+        }
+
+        .contact-form {
+            max-width: 400px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwSR6BYu0Q3aAO3tUSAsa_1-5ES4tBLJlcQ&usqp=CAU'); 
+            background-size: cover;
+        }
+
+        input[type="text"], textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h2><center>CONTACT US</center></h2>
+        <div>
+            <form action="contact.php" method="post">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" class="form-control" placeholder="Your name.." required>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name.." required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="Your email.." required>
+
+                <center><input type="submit" class="form-control submit" value="Submit"></center><hr>
+                <center><button><a href="shriram main.html" class="back-button">Back</a></button></center>   
+            </form>
+        </div>
+    </div>
+</body>
+</html>
